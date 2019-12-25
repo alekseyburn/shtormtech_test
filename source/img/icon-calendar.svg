@@ -1,14 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
-    <defs>
-        <path id="a" d="M0 30h28V4h-8V0h-2v4h-8V0H8v4H0v26zm2-2V12h24v16H2zM8 6v2h2V6h8v2h2V6h6v4H2V6h6z"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd" transform="translate(6 4)">
-        <mask id="b" fill="#fff">
-            <use xlink:href="#a"/>
-        </mask>
-        <use fill="#333" fill-rule="nonzero" xlink:href="#a"/>
-        <g fill="#00B956" mask="url(#b)">
-            <path d="M-8-6h44v44H-8z"/>
-        </g>
-    </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" width="40" height="40"><defs><path d="M25.71 5.33L25.71 0L28.57 0L28.57 5.33L40 5.33L40 40L0 40L0 5.33L11.43 5.33L11.43 0L14.29 0L14.29 5.33L25.71 5.33ZM2.86 37.33L37.14 37.33L37.14 16L2.86 16L2.86 37.33ZM2.86 13.33L37.14 13.33L37.14 8L28.57 8L28.57 10.67L25.71 10.67L25.71 8L14.29 8L14.29 10.67L11.43 10.67L11.43 8L2.86 8L2.86 13.33Z" id="b20BB0f6A9"></path></defs><g><g><g><use xlink:href="#b20BB0f6A9" opacity="1" fill="#00b956" fill-opacity="1"></use><g><use xlink:href="#b20BB0f6A9" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g></g></g></svg>

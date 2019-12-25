@@ -27,3 +27,31 @@ body {
   font-family: $font;
   color: $main-text;
 }
+
+@keyframes mousein {
+  from {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(90deg) scale(1);
+  }
+
+  to {
+    transform: rotate(90deg) scale(1.2);
+  }
+}
+
+@keyframes mouseout {
+  from {
+    transform: rotate(90deg) scale(1.2);
+  }
+
+  50% {
+    transform: rotate(90deg) scale(1);
+  }
+
+  to {
+    transform: rotate(0deg) scale(1);
+  }
+}
