@@ -1,5 +1,21 @@
 .section {
   overflow-x: hidden;
+
+  &--multiline {
+    & .section__svg {
+      margin: 0 auto 18px;
+    }
+
+    & .section__subtitle {
+      &--second {
+        display: none;
+      }
+
+      &--dedicated {
+        display: none;
+      }
+    }
+  }
 }
 
 .section__title {
@@ -50,10 +66,6 @@
 .section__svg {
   display: block;
   margin: 0 auto 14px;
-
-  &--multiline {
-    margin: 0 auto 18px;
-  }
 }
 
 .section__subtitle {
@@ -62,14 +74,6 @@
   font-weight: 500;
   font-size: 15px;
   line-height: 24px;
-
-  &--multiline {
-    display: none;
-  }
-
-  &--dedicated {
-    display: none;
-  }
 }
 
 .section__text {
@@ -85,6 +89,54 @@
 }
 
 @media (min-width: $tablet-width) {
+  .section {
+    &--multiline {
+      & .section__list {
+        flex-direction: column;
+        padding-top: 72px;
+        padding-bottom: 32px;
+      }
+
+      & .section__item {
+        position: relative;
+
+        display: flex;
+        flex-basis: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+      }
+
+      & .section__svg {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+
+        margin-bottom: 0;
+      }
+
+      & .section__subtitle {
+
+        &--second {
+          display: block;
+          margin-left: 55px;
+        }
+
+        &--dedicated {
+          display: block;
+          margin-left: 55px;
+        }
+      }
+
+      & .section__text {
+        margin-left: 55px;
+
+        text-align: left;
+      }
+    }
+
+  }
+
   .section__title {
     min-height: 152px;
     padding-right: 80px;
@@ -103,63 +155,23 @@
     width: 768px;
     margin: 0 auto;
     padding: 75px 56px 21px 48px;
-
-    &--multiline {
-      flex-direction: column;
-      padding-top: 72px;
-      padding-bottom: 32px;
-    }
   }
 
   .section__item {
     flex-basis: 200px;
     margin-bottom: 50px;
-
-    &--multiline {
-      position: relative;
-
-      display: flex;
-      flex-basis: auto;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 40px;
-    }
   }
 
   .section__svg {
     margin-bottom: 18px;
-
-    &--multiline {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-
-      margin-bottom: 0;
-    }
   }
 
   .section__subtitle {
     display: none;
-
-    &--multiline {
-      display: block;
-      margin-left: 55px;
-    }
-
-    &--dedicated {
-      display: block;
-      margin-left: 55px;
-    }
   }
 
   .section__text {
     margin-left: 0;
-
-    &--multiline {
-      margin-left: 55px;
-
-      text-align: left;
-    }
 
     &--second {
       display: block;
@@ -168,6 +180,46 @@
 }
 
 @media (min-width: $laptop-width) {
+  .section {
+    &--multiline {
+      & .section__list {
+        flex-direction: row;
+        padding-top: 76px;
+        padding-bottom: 32px;
+      }
+
+      & .section__item {
+        flex-basis: auto;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 244px;
+        margin-bottom: 40px;
+
+        text-align: left;
+      }
+
+      & .section__svg {
+        position: static;
+
+        margin-bottom: 20px;
+        margin-left: 5px;
+      }
+
+      & .section__subtitle {
+        margin-left: 0;
+
+        &--second {
+          margin-top: -5px;
+          margin-bottom: 5px;
+        }
+      }
+
+      & .section__text {
+        margin-left: 0;
+      }
+    }
+  }
+
   .section__title {
     min-height: 160px;
     width: $laptop-width;
@@ -179,61 +231,57 @@
   .section__list {
     width: 1024px;
     padding: 75px 64px 21px 64px;
-
-    &--multiline {
-      flex-direction: row;
-      padding-top: 76px;
-      padding-bottom: 32px;
-    }
   }
 
   .section__item {
     flex-basis: 244px;
     margin-bottom: 50px;
-
-    &--multiline {
-      flex-basis: auto;
-      justify-content: flex-start;
-      align-items: flex-start;
-      width: 244px;
-      margin-bottom: 40px;
-
-      text-align: left;
-    }
   }
 
   .section__svg {
-    &--multiline {
-      position: static;
-
-      margin-bottom: 20px;
-      margin-left: 5px;
-    }
 
     &:hover {
       animation: mousein 0.7s ease-out forwards;
     }
   }
-
-  .section__subtitle {
-    margin: 0;
-
-    &--multiline {
-      margin-top: -5px;
-      margin-bottom: 5px;
-    }
-  }
-
-  .section__text {
-    margin-left: 0;
-
-    &--multiline {
-      margin-left: 0;
-    }
-  }
 }
 
 @media (min-width: $desktop-width) {
+  .section {
+    &--multiline {
+      & .section__list {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        padding-left: 140px;
+      }
+
+      & .section__item {
+        flex-basis: auto;
+        align-items: flex-start;
+        width: 300px;
+        margin-bottom: 48px;
+
+        &--dedicated {
+          margin-bottom: 55px;
+        }
+      }
+
+      & .section__svg {
+        margin-bottom: 18px;
+        margin-left: 5px;
+      }
+
+      & .section__subtitle {
+        margin-top: -5px;
+        margin-bottom: 5px;
+      }
+
+      & .section__text {
+        margin-right: 0;
+      }
+    }
+  }
+
   .section__title {
     min-height: 197px;
     padding-bottom: 10px;
@@ -254,12 +302,6 @@
       padding: 95px 140px 45px 146px;
     }
 
-    &--multiline {
-      padding-top: 100px;
-      padding-bottom: 50px;
-      padding-left: 140px;
-    }
-
     &--padding {
       padding-bottom: 42px;
     }
@@ -271,42 +313,15 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 57px;
-
-    &--multiline {
-      flex-basis: auto;
-      align-items: flex-start;
-      width: 300px;
-      margin-bottom: 48px;
-    }
-
-    &--dedicated {
-      margin-bottom: 55px;
-    }
   }
 
   .section__svg {
     margin: 0;
-
-    &--multiline {
-      margin-bottom: 18px;
-      margin-left: 5px;
-    }
-  }
-
-  .section__subtitle {
-    &--multiline {
-      margin-top: -5px;
-      margin-bottom: 5px;
-    }
   }
 
   .section__text {
     flex-grow: 1;
     margin-right: 20px;
-
-    &--multiline {
-      margin-right: 0;
-    }
 
     &--first {
       display: none;
