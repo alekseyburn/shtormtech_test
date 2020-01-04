@@ -1,8 +1,13 @@
+.section {
+  overflow-x: hidden;
+}
+
 .section__title {
   display: flex;
   align-items: center;
   min-height: 148px;
-  margin: 0;
+  width: $mobile-width;
+  margin: 0 auto;
   padding-right: 32px;
   padding-left: 32px;
 
@@ -10,7 +15,20 @@
   font-size: 30px;
   line-height: 36px;
 
-  background-color: $gray;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    transform-origin: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $gray;
+    z-index: -1;
+  }
 }
 
 .section__list {
@@ -71,6 +89,7 @@
     min-height: 152px;
     padding-right: 80px;
     padding-left: 80px;
+    width: $tablet-width;
 
     font-size: 36px;
     line-height: 40px;
@@ -151,6 +170,7 @@
 @media (min-width: $laptop-width) {
   .section__title {
     min-height: 160px;
+    width: $laptop-width;
 
     font-size: 44px;
     line-height: 48px;
@@ -217,7 +237,7 @@
   .section__title {
     min-height: 197px;
     padding-bottom: 10px;
-
+    width: $desktop-width;
     font-size: 52px;
     line-height: 56px;
     letter-spacing: 0.5px;
