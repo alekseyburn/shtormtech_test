@@ -39,9 +39,9 @@ gulp.task('css', () => {
       .pipe(postcss([
         autoprefixer(),
       ]))
-      .pipe(purgecss({
-        content: ['src/index.html'],
-      }))
+      // .pipe(purgecss({
+      //   content: ['src/index.html'],
+      // }))
       .pipe(gulp.dest('build/css'))
       .pipe(csso())
       .pipe(rename('style.min.css'))
@@ -55,10 +55,10 @@ gulp.task('css', () => {
     .pipe(postcss([
       autoprefixer(),
     ]))
-    .pipe(purgecss({
-      content: ['build/**/*.html'],
-      whitelist: ['active', 'slide-js', 'visible', 'non-visible', 'slideInLeft', 'slideInRight', 'slideOutLeft', 'slideOutRight','slick-dots', 'slick-active', 'valid', 'invalid', 'success', 'mouseout'],
-    }))
+    // .pipe(purgecss({
+    //   content: ['build/**/*.html'],
+    //   whitelist: ['active', 'slide-js', 'visible', 'non-visible', 'slideInLeft', 'slideInRight', 'slideOutLeft', 'slideOutRight','slick-dots', 'slick-active', 'valid', 'invalid', 'success', 'mouseout'],
+    // }))
     .pipe(gulp.dest('build/css'))
     .pipe(cssnano())
     .pipe(rename('style.min.css'))
@@ -87,11 +87,7 @@ gulp.task('images', () => gulp.src('source/img/**/*.{png,jpg,svg}')
 gulp.task('js', () => gulp.src('source/js/modules/**/*.js')
   .pipe(order([
     'loadScripts.js',
-    'lazyload.js',
-    'slider.js',
-    'tilt.js',
-    'form.js',
-    'animation.js',
+    'script.js',
   ]))
   .pipe(concat('script.js'))
   .pipe(babel({ presets: ['@babel/preset-env'] }))
@@ -171,6 +167,6 @@ gulp.task('deploy', (cb) => {
   ghPages.publish('build', cb);
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'html', 'css', 'webp', 'images', 'sprite', 'js', 'critical'));
+gulp.task('build', gulp.series('clean', 'copy', 'html', 'css', 'webp', 'images', 'sprite', 'js'));
 gulp.task('start', gulp.series('build', 'server'));
 gulp.task('remote', gulp.series('build', 'deploy'));
